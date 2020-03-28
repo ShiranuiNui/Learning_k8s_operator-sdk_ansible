@@ -1,7 +1,16 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: memcached
+  labels:
+    name: memcached
+
+---
 apiVersion: cache.example.com/v1alpha1
 kind: Memcached
 metadata:
   name: example-memcached
+  namespace: memcached
 spec:
   # Add fields here
   size: 3
